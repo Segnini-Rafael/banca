@@ -14,19 +14,17 @@ public class Desafio {
         System.out.println("Saldo disponible: $" + saldo);
         System.out.println("*");
 
+        String lista = """
+                *** Escriba el numero de la opcion deseada ***
+                1 - Consulta saldo
+                2 - Retirar
+                3 - Depositar
+                9 - Salir
+                """;
 
         while (option != 9) {
-            System.out.println("******************************");
-            System.out.println("*     BIENVENIDO AL BANCO    *");
-            System.out.println("******************************");
-            System.out.println("* 1. Consultar saldo         *");
-            System.out.println("* 2. Retirar dinero          *");
-            System.out.println("* 3. Depositar dinero        *");
-            System.out.println("* 9. Salir                   *");
-            System.out.println("******************************");
-            System.out.print("Seleccione una opción: ");
-            option = menu.nextInt();
-
+           System.out.println(lista);
+           option = menu.nextInt();
            switch (option){
                case 1:
                    System.out.println("El saldo actualizado es: " + saldo + "$");
